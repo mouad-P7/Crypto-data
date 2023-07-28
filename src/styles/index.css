@@ -41,6 +41,15 @@ span{
   font-size: inherit;
   font-weight: inherit;
 }
+small{
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 11px;
+}
+.card{
+  padding: 20px;
+  border-radius: 5px;
+}
 hr{
   padding: 0 !important;
 }
@@ -94,14 +103,6 @@ h3{
   line-height: 30px;
   @media (width < 1000px){font-size: 24px;}
   @media (width < 450px){font-size: px;}
-}
-small{
-  display: inline-flex;
-  font-weight: 400;
-}
-.card{
-  padding: 20px;
-  border-radius: 5px;
 }
 
 /*------------ Scroll Bar --------------*/
