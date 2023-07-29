@@ -1,0 +1,20 @@
+button{
+  padding: 5px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+button.blue-btn{
+  background-color: var(--bg-blue);
+  color: var(--text-white);
+}
+button.blue-btn:hover{
+  background-color: var(--bg-hover-blue);
+}
+button.white-btn{
+  background-color: var(--bg-white);
+  color: var(--text-blue);
+}
+button.white-btn:hover{
+  background-color: var(--bg-hover-white);
+}

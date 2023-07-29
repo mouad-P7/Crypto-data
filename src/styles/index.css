@@ -32,10 +32,6 @@ header, main, footer{
   width: 100%;
 }
 button, label, input{cursor: pointer;}
-button{
-  border: none;
-  border-radius: 5px;
-}
 span{
   color: inherit;
   font-size: inherit;

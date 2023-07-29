@@ -1,5 +1,6 @@
 import { FaMoon, FaGasPump } from "react-icons/fa6";
 import TopbarData from "./TopbarData";
+import Button from "../../common/Button";
 import './styles/Topbar.css';
 
 
@@ -21,8 +22,8 @@ export default function Topbar() {
         </div>
         <span id="small-divider" />
         <div id="logIn-signUp-ctr">
-          <button id="logIn">Log In</button>
-          <button id="signUp"> Sign Up</button>
+          <Button id="logIn" className='white-btn' style={{ border: 'solid 1px var(--bg-blue)' }}>Log In</Button>
+          <Button id="signUp" className='blue-btn'>Sign Up</Button>
         </div>
       </div>
     </div>
