@@ -1,2 +1,31 @@
 #Topbar{
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+#topbar-right-ctr{
+  flex: 1 1;
+  display: flex;
+  gap: 15px;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+#topbar-left-ctr{
+  width: 200px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  @media (width < 800px){display: none;}
+}
+#small-divider{
+  height: 22px;
+  width: 1.5px;
+  margin: 0 15px;
+  background-color: var(--bg-gray);
+}
+#logIn-signUp-ctr{
+  display: flex;
+  gap: 15px;
 }

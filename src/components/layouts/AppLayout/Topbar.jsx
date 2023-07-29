@@ -12,12 +12,12 @@ export default function Topbar() {
         <TopbarData pct={0.53} value='$1.18T'>Market Cap</TopbarData>
         <TopbarData pct={-12.68} value='$26.46B'>24h Vol</TopbarData>
         <TopbarData value='BTC: 48.1% ETH: 19.1%'>Dominance</TopbarData>
-        <TopbarData value='45 Gwei'><FaGasPump /> ETH Gas</TopbarData>
+        <TopbarData value='45 Gwei'><FaGasPump size={12} /> ETH Gas</TopbarData>
         <TopbarData value='51/100'>Fear & Greed</TopbarData>
       </div>
       <div id="topbar-left-ctr">
         <div id="display-settings">
-          <FaMoon />
+          <FaMoon size={15} style={{ cursor: 'pointer' }} />
         </div>
         <span id="small-divider" />
         <div id="logIn-signUp-ctr">
