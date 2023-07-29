@@ -1,0 +1,18 @@
+header, #header-middle-ctr, #header-left-ctr{
+  display: flex;
+  align-items: center;
+}
+header{
+  padding: 15px;
+  gap: 20px;
+}
+#header-middle-ctr{
+  flex-grow: 1;
+  gap: 20px;
+}
+#header-middle-ctr a{
+  font-weight: 600;
+}
+#header-left-ctr{
+  gap: 15px;
+}

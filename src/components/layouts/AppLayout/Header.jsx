@@ -16,7 +16,7 @@ export default function Header() {
       <Link id='home-link' to='.'>
         <img src="./assets/logo.png" alt="logo" />
       </Link>
-      <div id='header-middle-ctr'>
+      <nav id='header-middle-ctr'>
         <NavLink to='exchanges' className={({isActive}) => activeLink(isActive)}>
           Exchanges
         </NavLink>
@@ -29,10 +29,12 @@ export default function Header() {
         <NavLink to='learn' className={({isActive}) => activeLink(isActive)}>
           Learn
         </NavLink>
-      </div>
+      </nav>
       <div id='header-left-ctr'>
         <NavLink to='watchlist' className={({isActive}) => activeLink(isActive)}>
-          <Button><FaStar /> Watchlist</Button>
+          <Button className='transparent-btn'>
+            <FaStar size={17} color='var(--text-gray-3)' /> Watchlist
+          </Button>
         </NavLink>
         <Search />
       </div>
