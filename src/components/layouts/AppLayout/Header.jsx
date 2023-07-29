@@ -30,7 +30,7 @@ export default function Header() {
           Learn
         </NavLink>
       </nav>
-      <div id='header-left-ctr'>
+      <div id='header-right-ctr'>
         <NavLink to='watchlist' className={({isActive}) => activeLink(isActive)}>
           <Button className='transparent-btn'>
             <FaStar size={17} color='var(--text-gray-3)' /> Watchlist

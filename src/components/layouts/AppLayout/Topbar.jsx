@@ -7,7 +7,7 @@ import './styles/Topbar.css';
 export default function Topbar() {
   return (
     <div id="Topbar">
-      <div id="topbar-right-ctr">
+      <div id="topbar-left-ctr">
         <TopbarData value='1.8M+'>Cryptos</TopbarData>
         <TopbarData value='651'>Exchanges</TopbarData>
         <TopbarData pct={0.53} value='$1.18T'>Market Cap</TopbarData>
@@ -16,7 +16,7 @@ export default function Topbar() {
         <TopbarData value='45 Gwei'><FaGasPump size={12} /> ETH Gas</TopbarData>
         <TopbarData value='51/100'>Fear & Greed</TopbarData>
       </div>
-      <div id="topbar-left-ctr">
+      <div id="topbar-right-ctr">
         <div id="display-settings">
           <FaMoon size={15} style={{ cursor: 'pointer' }} />
         </div>

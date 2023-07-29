@@ -5,14 +5,14 @@
   justify-content: space-between;
   gap: 15px;
 }
-#topbar-right-ctr{
+#topbar-left-ctr{
   flex: 1;
   display: flex;
   gap: 15px;
   overflow-x: hidden;
   white-space: nowrap;
 }
-#topbar-left-ctr{
+#topbar-right-ctr{
   width: 240px;
   display: flex;
   justify-content: end;

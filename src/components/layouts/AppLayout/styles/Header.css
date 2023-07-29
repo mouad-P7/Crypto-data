@@ -1,4 +1,4 @@
-header, #header-middle-ctr, #header-left-ctr{
+header, #header-middle-ctr, #header-right-ctr{
   display: flex;
   align-items: center;
 }
@@ -13,6 +13,6 @@ header{
 #header-middle-ctr a{
   font-weight: 600;
 }
-#header-left-ctr{
+#header-right-ctr{
   gap: 15px;
 }
