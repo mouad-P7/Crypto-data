@@ -5,6 +5,7 @@ import Exchanges from './components/pages/Exchanges';
 import Community from './components/pages/Community';
 import Products from "./components/pages/Products";
 import Learn from "./components/pages/Learn";
+import Watchlist from "./components/pages/Watchlist";
 import './styles/App.css';
 
 
@@ -19,6 +20,7 @@ export default function App(){
             <Route path="community" element={<Community />}/>
             <Route path="products" element={<Products />}/>
             <Route path="learn" element={<Learn />}/>
+            <Route path="watchlist" element={<Watchlist />}/>
           </Route>
         </Routes>
       </BrowserRouter>
