@@ -1,0 +1,16 @@
+#search-form{
+  width: 250px;
+  height: 38px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: var(--bg-light-gray);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#search-label{
+  display: flex;
+}
+#search-input{
+  padding-left: 5px;
+}

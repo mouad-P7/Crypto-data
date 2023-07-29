@@ -32,6 +32,11 @@ header, main, footer{
   width: 100%;
 }
 button, label, input{cursor: pointer;}
+input{
+  background-color: transparent;
+  border: none;
+  text-align: start;
+}
 span{
   color: inherit;
   font-size: inherit;
