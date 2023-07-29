@@ -47,7 +47,8 @@ small{
   border-radius: 5px;
 }
 hr{
-  padding: 0 !important;
+  padding: 0;
+  border-color: var(--bg-hover-white);
 }
 a{
   text-decoration: none;

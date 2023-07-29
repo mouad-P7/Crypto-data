@@ -8,7 +8,9 @@ export default function AppLayout() {
   return (
     <>
       <Topbar />
+      <hr />
       <Header />
+      <hr />
       <main>
         <Outlet />
       </main>
