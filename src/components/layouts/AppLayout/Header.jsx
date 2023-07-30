@@ -1,16 +1,14 @@
 import { Link, NavLink } from 'react-router-dom';
 import { FaStar, FaBars, FaMoon, FaMagnifyingGlass } from "react-icons/fa6";
+import { activeLink } from '../../../utils/functions';
 import Button from '../../common/Button';
 import Search from './Search';
 import './styles/Header.css';
 
 
 export default function Header() {
-  function activeLink(isActive){
-    return isActive ? "isActive" : null;
-  };
   function toggleMenu(){
-    
+
   };
 
   

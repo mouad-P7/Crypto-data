@@ -3,4 +3,9 @@ export function removePlusOrMinus(number){
     return String(Number(number));
   else 
     return number;
-}
+};
+
+
+export function activeLink(isActive){
+  return isActive ? "isActive" : null;
+};

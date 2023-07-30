@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { FaStar, FaXmark, FaSquareFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa6";
+import { activeLink } from '../../../utils/functions';
 import Button from '../../common/Button';
 import './styles/MobileMenu.css';
 
@@ -9,9 +10,6 @@ export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(window.innerWidth < 1000);
 
 
-  function activeLink(isActive){
-    return isActive ? "isActive" : null;
-  };
   function handleResize(){
     setIsMenuOpen(window.innerWidth < 1000);
   };
