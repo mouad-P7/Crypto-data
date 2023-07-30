@@ -1,6 +1,5 @@
 .TopbarData{
   flex-shrink: 0;
-  flex-grow: 1;
   display: flex;
   gap: 2px;
   flex-wrap: nowrap;

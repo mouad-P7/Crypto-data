@@ -1,4 +1,4 @@
-/* Media Query: mobile < 450px / tablet < 800px */
+/* Media Query: mobile < 450px / tablet < 800px / laptop < 1000px */
 
 /*---------- Global CSS ------------*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
@@ -16,6 +16,7 @@
   text-align: center;
   color: var(--black-100);
   box-sizing: border-box;
+  transition: all 0.3s ease;
   @media (width < 1000px){font-size: 14px;}
 }
 #root, body{
@@ -82,6 +83,7 @@ a:hover{
   text-decoration: underline;
   font-weight: 800 !important;
 }
+.icon-ctr{display: flex;}
 
 /*------------ Typography -------------*/
 

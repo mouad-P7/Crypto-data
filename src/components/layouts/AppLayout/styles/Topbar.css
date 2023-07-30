@@ -17,7 +17,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
-  @media (width < 800px){display: none;}
+  @media (width < 1000px){display: none;}
 }
 #display-settings{
   display: flex;

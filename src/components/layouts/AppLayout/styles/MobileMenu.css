@@ -1,0 +1,50 @@
+#MobileMenu{
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  max-width: 450px;
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  background-color: var(--bg-white);
+  box-shadow: #808a9d1f 8px 0px 32px, #808a9d14 1px 0px 2px;
+}
+#Menu-header{
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: #808a9d1f 0px 8px 32px, #808a9d14 0px 1px 2px;
+}
+#Menu-ctr{
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+#Menu-ctr a{
+  font-weight: 600;
+  padding: 10px 0;
+}
+#nav-menu{
+  display: flex;
+  flex-direction: column;
+}
+#watchlist-link-ctr{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#mobile-logIn-signUp-ctr{
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#mobile-logIn-signUp-ctr button{
+  width: 100%;
+}
+.follow-us{
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

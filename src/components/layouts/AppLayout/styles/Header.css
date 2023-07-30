@@ -1,18 +1,27 @@
-header, #header-middle-ctr, #header-right-ctr{
+header, #header-middle-ctr, #header-right-ctr, #menu-icons-ctr{
   display: flex;
   align-items: center;
 }
 header{
   padding: 15px;
+  justify-content: space-between;
   gap: 20px;
 }
 #header-middle-ctr{
   flex-grow: 1;
+  justify-content: flex-start;
   gap: 20px;
+  @media (width < 1000px){display: none;}
 }
 #header-middle-ctr a{
   font-weight: 600;
 }
 #header-right-ctr{
+  justify-content: space-between;
   gap: 15px;
+  @media (width < 1000px){display: none;}
+}
+#menu-icons-ctr{
+  gap: 15px;
+  @media (width >= 1000px){display: none;}
 }

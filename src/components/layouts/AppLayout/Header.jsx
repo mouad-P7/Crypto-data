@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { FaStar } from "react-icons/fa6";
+import { FaStar, FaBars, FaMoon, FaMagnifyingGlass } from "react-icons/fa6";
 import Button from '../../common/Button';
 import Search from './Search';
 import './styles/Header.css';
@@ -8,6 +8,9 @@ import './styles/Header.css';
 export default function Header() {
   function activeLink(isActive){
     return isActive ? "isActive" : null;
+  };
+  function toggleMenu(){
+    
   };
 
   
@@ -37,6 +40,17 @@ export default function Header() {
           </Button>
         </NavLink>
         <Search />
+      </div>
+      <div id='menu-icons-ctr'>
+        <div className="icon-ctr">
+          <FaMagnifyingGlass size={20} style={{ cursor: 'pointer' }} />
+        </div>
+        <div className="icon-ctr">
+          <FaMoon size={20} style={{ cursor: 'pointer' }} />
+        </div>
+        <div className="icon-ctr" onClick={toggleMenu}>
+          <FaBars size={20} style={{ cursor: 'pointer' }} />
+        </div>
       </div>
     </header>
   );
