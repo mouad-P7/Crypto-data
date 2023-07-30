@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleMobileMenu } from '../../../redux/mobileMenu';
 import { FaStar, FaXmark, FaSquareFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa6";
 import { activeLink } from '../../../utils/functions';
 import Button from '../../common/Button';
@@ -7,23 +8,13 @@ import './styles/MobileMenu.css';
 
 
 export default function MobileMenu() {
-  const [isMenuOpen, setIsMenuOpen] = useState(window.innerWidth < 1000);
+  const isMenuOpen = useSelector(state => state.mobileMenu.isMenuOpen);
+  const dispatch = useDispatch();
 
 
-  function handleResize(){
-    setIsMenuOpen(window.innerWidth < 1000);
-  };
   function toggleMenu(){
-    setIsMenuOpen(prevState => !prevState);
+    dispatch(toggleMobileMenu());
   };
-
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
 
   return (

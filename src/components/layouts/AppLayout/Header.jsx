@@ -1,5 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { FaStar, FaBars, FaMoon, FaMagnifyingGlass } from "react-icons/fa6";
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleMobileMenu } from '../../../redux/mobileMenu';
 import { activeLink } from '../../../utils/functions';
 import Button from '../../common/Button';
 import Search from './Search';
@@ -7,8 +9,11 @@ import './styles/Header.css';
 
 
 export default function Header() {
-  function toggleMenu(){
+  const dispatch = useDispatch();
 
+
+  function toggleMenu(){
+    dispatch(toggleMobileMenu());
   };
 
   
