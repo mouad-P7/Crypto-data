@@ -1,0 +1,60 @@
+#home-hero-ctr{
+  display: flex;
+  justify-content: space-between;
+}
+#hightlights-ctr{
+  padding: 10px 5px;
+  display: flex;
+  gap: 10px;
+  @media (width < 800px) {display: none;}
+}
+
+/*============ Toggle switch ============*/
+
+.toggle-ctr{
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  overflow: visible;
+  margin-top: 10px;
+  @media (width < 800px) {display: none;}
+}
+.switch {
+  margin: 5px 15px;
+  position: relative;
+  height: 21px;
+  width: 42px;
+  overflow: visible;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 9999px;
+  background-color: rgba(100, 116, 139, 0.377);
+}
+.switch:checked {
+  background-color: var(--bg-blue);
+}
+.switch::before {
+  position: absolute;
+  content: "";
+  left: calc(1.5rem - 1.8rem);
+  top: calc(1.5rem - 1.65rem);
+  display: block;
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  border: 1px solid rgba(100, 116, 139, 0.527);
+  border-radius: 9999px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+  transition: all .3s ease;
+}
+.switch:hover::before {
+  box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+}
+.switch:checked:hover::before {
+  box-shadow: 0 0 0px 8px rgba(236, 72, 153, .15)
+}
+.switch:checked:before {
+  transform: translateX(100%);
+  border-color: rgb(111, 83, 223);
+}

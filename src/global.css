@@ -52,8 +52,9 @@ strong{
   font-weight: 700;
 }
 .card{
-  padding: 20px;
-  border-radius: 5px;
+  padding: 15px;
+  border-radius: 15px;
+  @media (width < 1000px){padding: 10px;}
 }
 hr{
   padding: 0;
@@ -93,24 +94,24 @@ a:hover{
 h1, h2, h3, p{text-align: start;}
 h1{
   font-weight: 900;
-  font-size: 55px;
-  line-height: 70px;
-  @media (width < 1000px){font-size: 35px;}
-  @media (width < 450px){font-size: 30px;}
+  font-size: 30px;
+  line-height: 40px;
+  @media (width < 1000px){font-size: 24px;}
+  @media (width < 450px){font-size: 22px;}
 }
 h2{
   font-weight: 800;
-  font-size: 40px;
+  font-size: 24px;
   line-height: 50px;
-  @media (width < 1000px){font-size: 26px;}
-  @media (width < 450px){font-size: 24px;}
+  @media (width < 1000px){font-size: 22px;}
+  @media (width < 450px){font-size: 20px;}
 }
 h3{
   font-weight: 700;
-  font-size: 30px;
-  line-height: 30px;
-  @media (width < 1000px){font-size: 24px;}
-  @media (width < 450px){font-size: px;}
+  font-size: 20px;
+  line-height: 40px;
+  @media (width < 1000px){font-size: 19px;}
+  @media (width < 450px){font-size: 18px;}
 }
 
 /*------------ Scroll Bar --------------*/

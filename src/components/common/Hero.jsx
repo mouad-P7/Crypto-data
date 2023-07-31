@@ -8,7 +8,7 @@ export default function Hero({title, firstLine, children, ...restProps}) {
 
   return (
     <div className="Hero" {...restProps}>
-      <h3>{title}</h3>
+      <h1>{title}</h1>
       <p className='first-line-ctr'>
         {firstLine} 
         {
