@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "./components/layouts/AppLayout/AppLayout";
-import Home from "./components/pages/Home";
-import Exchanges from './components/pages/Exchanges';
-import Community from './components/pages/Community';
-import Products from "./components/pages/Products";
-import Learn from "./components/pages/Learn";
-import Watchlist from "./components/pages/Watchlist";
+import Home from "./components/pages/Home/Home";
+import Exchanges from './components/pages/Exchanges/Exchanges';
+import Community from './components/pages/Community/Community';
+import Products from "./components/pages/Products/Products";
+import Learn from "./components/pages/Learn/Learn";
+import Watchlist from "./components/pages/Watchlist/Watchlist";
 
 
 export default function App(){
