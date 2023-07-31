@@ -6,12 +6,11 @@ import Community from './components/pages/Community';
 import Products from "./components/pages/Products";
 import Learn from "./components/pages/Learn";
 import Watchlist from "./components/pages/Watchlist";
-import './styles/App.css';
 
 
 export default function App(){
   return (
-    <div id='App'>
+    <div id='App' style={{ width: '100%', minHeight: '100vh' }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<AppLayout />}> 

@@ -4,8 +4,8 @@ import App from './App.jsx';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import mobileMenuReducer from './redux/mobileMenu';
-import './styles/variables.css';
-import './styles/index.css';
+import './variables.css';
+import './global.css';
 
 
 const store = configureStore({
