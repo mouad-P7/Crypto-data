@@ -11,13 +11,14 @@ export default function Pct({pct}) {
     pctColor = 'var(--text-red)';
     caretIcon = <FaCaretUp color="inherit"/>
   }
+  const pctCtrStyle = {display: 'flex', alignItems: 'center', color: pctColor};
 
 
   return (
     <>
       {
         pct 
-        ? <span className="pct-ctr" style={{ color: pctColor }}>
+        ? <span style={pctCtrStyle}>
             {caretIcon}{removePlusOrMinus(pct)}%
           </span> 
         : null

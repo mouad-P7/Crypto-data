@@ -1,10 +1,17 @@
 import Pct from '../../common/Pct';
-import './styles/TopbarData.css';
 
 
 export default function TopbarData({children, value, pct, ...restProps}){
+  const topbarDataStyle = {
+    flexShrink: 0,
+    display: 'flex',
+    gap: '2px',
+    flexWrap: 'nowrap'
+  };
+
+
   return (
-    <small className='TopbarData' {...restProps}>
+    <small style={topbarDataStyle} {...restProps}>
       <span>{children}:</span>
       <span style={{ color: 'var(--text-blue)' }}>{value}</span>
       <Pct pct={pct} />
