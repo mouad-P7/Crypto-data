@@ -6,6 +6,7 @@ import Community from './components/pages/Community/Community';
 import Products from "./components/pages/Products/Products";
 import Learn from "./components/pages/Learn/Learn";
 import Watchlist from "./components/pages/Watchlist/Watchlist";
+import NotFound from './components/pages/NotFound/NotFound';
 
 
 export default function App(){
@@ -21,6 +22,7 @@ export default function App(){
             <Route path="learn" element={<Learn />}/>
             <Route path="watchlist" element={<Watchlist />}/>
           </Route>
+          <Route path='*' element={<NotFound />}/>
         </Routes>
       </BrowserRouter>
     </div>

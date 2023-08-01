@@ -87,6 +87,7 @@ a:hover{
   text-decoration: underline;
   font-weight: 800 !important;
 }
+.blue-link{color: var(--text-blue);}
 .icon-ctr{display: flex;}
 
 /*------------ Typography -------------*/
