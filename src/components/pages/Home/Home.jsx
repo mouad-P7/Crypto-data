@@ -2,6 +2,7 @@ import { useState } from "react";
 import Hero from "../../common/Hero";
 import HighlightCard from "./HighlightCard";
 import Pct from "../../common/Pct";
+import CryptoTable from "./CryptoTable";
 import { FaCircleInfo } from "react-icons/fa6";
 import './styles/Home.css';
 
@@ -43,6 +44,8 @@ export default function Home() {
           <HighlightCard title={<><p>Fear & Greed Index</p><FaCircleInfo /></>}/>
         </div>
       }
+
+      <CryptoTable />
     </div>
   );
 };
