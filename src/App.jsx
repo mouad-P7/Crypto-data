@@ -1,29 +1,35 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AppLayout from "./components/layouts/AppLayout/AppLayout";
-import Home from "./components/pages/Home/Home";
-import Exchanges from './components/pages/Exchanges/Exchanges';
-import Community from './components/pages/Community/Community';
-import Products from "./components/pages/Products/Products";
-import Learn from "./components/pages/Learn/Learn";
-import Watchlist from "./components/pages/Watchlist/Watchlist";
-import NotFound from './components/pages/NotFound/NotFound';
+
+
+const AppLayout = lazy(() => import("./components/layouts/AppLayout/AppLayout"));
+const Home = lazy(() => import("./components/pages/Home/Home"));
+const Exchanges = lazy(() => import("./components/pages/Exchanges/Exchanges"));
+const Community = lazy(() => import("./components/pages/Community/Community"));
+const Products = lazy(() => import("./components/pages/Products/Products"));
+const Learn = lazy(() => import("./components/pages/Learn/Learn"));
+const Watchlist = lazy(() => import("./components/pages/Watchlist/Watchlist"));
+const NotFound = lazy(() => import("./components/pages/NotFound"));
+const PageLoading = lazy(() => import("./components/pages/PageLoading"));
 
 
 export default function App(){
   return (
     <div id='App' style={{ width: '100%', minHeight: '100vh' }}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<AppLayout />}> 
-            <Route index element={<Home />}/>
-            <Route path="exchanges" element={<Exchanges />}/>
-            <Route path="community" element={<Community />}/>
-            <Route path="products" element={<Products />}/>
-            <Route path="learn" element={<Learn />}/>
-            <Route path="watchlist" element={<Watchlist />}/>
-          </Route>
-          <Route path='*' element={<NotFound />}/>
-        </Routes>
+        <Suspense fallback={<PageLoading />}>
+          <Routes>
+            <Route path="/" element={<AppLayout />}>
+                <Route index element={<Home />} />
+                <Route path="exchanges" element={<Exchanges />} />
+                <Route path="community" element={<Community />} />
+                <Route path="products" element={<Products />} />
+                <Route path="learn" element={<Learn />} />
+                <Route path="watchlist" element={<Watchlist />} />
+            </Route>
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </div>
   );
