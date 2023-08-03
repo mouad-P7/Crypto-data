@@ -13,7 +13,7 @@ export default function UnderDevelopement() {
 
   return (
     <div id='UnderDevelopment' style={style}>
-      <img src="./assets/under-development.png" alt="under-development"/>
+      <img src="./images/under-development.png" alt="under-development"/>
       <Link to='.'><Button className='blue-btn'>Back to Home</Button></Link>
     </div>
   );

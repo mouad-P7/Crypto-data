@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <header>
       <Link id='home-link' to='.'>
-        <img src="./assets/logo.png" alt="logo" />
+        <img src="./images/logo.png" alt="logo" />
       </Link>
       <nav id='header-middle-ctr'>
         <NavLink to='exchanges' className={({isActive}) => activeLink(isActive)}>

@@ -12,7 +12,7 @@ export default function NotFound() {
 
   return (
     <div id='NotFound' style={style}>
-      <img src="./assets/404.png" alt="404-img" />
+      <img src="./images/404.png" alt="404-img" />
       <h1>Opps, something went wrong</h1>
       <p style={{ marginBottom: '10px' }}>Sorry, we couldn't find your page</p>
       <Link to='.'><Button className='blue-btn'>Back to Home</Button></Link>

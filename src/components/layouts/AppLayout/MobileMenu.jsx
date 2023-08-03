@@ -21,7 +21,7 @@ export default function MobileMenu() {
     <div id='MobileMenu' style={{ left: isMenuOpen ? 0 : '-100vw' }}>
       <div id='Menu-header'>
         <Link to='.'>
-          <img src="./assets/logo.png" alt="logo" />
+          <img src="./images/logo.png" alt="logo" />
         </Link>
         <div className="icon-ctr" onClick={toggleMenu}>
           <FaXmark size={25} style={{ cursor: 'pointer' }} />

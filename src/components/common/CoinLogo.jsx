@@ -1,5 +1,5 @@
 export default function CoinLogo({symbol = "", size = 24, ...restProps}) {
-  const imgSrc = symbol ? `./icons/${symbol}.png` : './assets/bubble-loading-svg';
+  const imgSrc = symbol ? `./coins-logo/${symbol}.png` : '';
 
 
   return (
