@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { fetchData } from '../../../utils/api';
 import Pct from '../../common/Pct';
+import CoinLogo from '../../common/CoinLogo';
 import './styles/CryptoTable.css';
 
 
 export default function CryptoTable() {
   const [cryptoData, setCryptoData] = useState([]);
-  const [fallBack, setFallBack] = useState('');
+  const [fallBack, setFallBack] = useState('loading...');
   const apiUrl = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
 
 
@@ -52,7 +53,7 @@ export default function CryptoTable() {
                   </td>
                   <td>{index + 1}</td>
                   <td>
-                    {crypto.name} {crypto.symbol}
+                    <CoinLogo symbol={crypto.symbol}/> {crypto.name} {crypto.symbol}
                   </td>
                   <td>
                     $ {crypto.quote.USD.price}
@@ -80,7 +81,7 @@ export default function CryptoTable() {
                   </td>
                 </tr>
               )) 
-            : <p>{fallBack ? fallBack : 'loading...'}</p>
+            : <tr>{fallBack === 'loading...' ? 'loading...' : fallBack}</tr>
           }
         </tbody>
       </table>

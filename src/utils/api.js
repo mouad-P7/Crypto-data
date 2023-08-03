@@ -8,7 +8,7 @@ export async function fetchData(apiUrl){
       headers: {'X-CMC_PRO_API_KEY': apiKey}
     });
     if (!response.ok) throw new Error('Network response was not ok');
-    const jsonData = await response.json()
+    const jsonData = await response.json();
     return jsonData.data;
   } catch(error) {
     throw new Error(`Error fetching data: ${error.message}`);
