@@ -1,8 +1,11 @@
+import UnderDevelopement from "../../common/UnderDevelopement";
 // import '';
 
 
 export default function Exchanges() {
   return (
-    <div>Exchanges</div>
+    <div>
+      <UnderDevelopement />
+    </div>
   );
 };

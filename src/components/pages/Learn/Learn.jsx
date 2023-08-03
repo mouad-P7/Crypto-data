@@ -1,8 +1,11 @@
-// import '';
+import UnderDevelopement from "../../common/UnderDevelopement";
+// import './';
 
 
 export default function Learn() {
   return (
-    <div>Learn</div>
+    <div>
+      <UnderDevelopement />
+    </div>
   );
 };
