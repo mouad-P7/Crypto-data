@@ -1,7 +1,6 @@
 .dot-spinner {
   margin: auto;
   overflow: hidden;
-  --uib-size: 80px;
   --uib-speed: .9s;
   --uib-color: #183153;
   position: relative;
