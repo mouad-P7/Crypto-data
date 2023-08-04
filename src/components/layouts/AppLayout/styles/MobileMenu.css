@@ -6,7 +6,7 @@
   position: absolute;
   top: 0;
   background-color: var(--bg-white);
-  box-shadow: #808a9d1f 8px 0px 32px, #808a9d14 1px 0px 2px;
+  box-shadow: #808a9d1f 2px 0px 32px, #808a9d14 1px 0px 2px;
 }
 #Menu-header{
   padding: 15px;

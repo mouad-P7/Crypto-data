@@ -1,4 +1,4 @@
-import { FaMoon, FaGasPump } from "react-icons/fa6";
+import { FaMoon, FaGasPump } from "../../common/Icons";
 import TopbarData from "./TopbarData";
 import Button from "../../common/Button";
 import './styles/Topbar.css';
@@ -13,12 +13,14 @@ export default function Topbar() {
         <TopbarData pct={0.53} value='$1.18T'>Market Cap</TopbarData>
         <TopbarData pct={-12.68} value='$26.46B'>24h Vol</TopbarData>
         <TopbarData value='BTC: 48.1% ETH: 19.1%'>Dominance</TopbarData>
-        <TopbarData value='45 Gwei'><FaGasPump size={12} /> ETH Gas</TopbarData>
+        <TopbarData value='45 Gwei'>
+          <FaGasPump size={15} style={{marginBottom:'2px'}}/> ETH Gas
+        </TopbarData>
         <TopbarData value='51/100'>Fear & Greed</TopbarData>
       </div>
       <div id="topbar-right-ctr">
         <div id="display-settings">
-          <FaMoon size={15} style={{ cursor: 'pointer' }} />
+          <FaMoon />
         </div>
         <span id="small-divider" />
         <div id="logIn-signUp-ctr">

@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleMobileMenu } from '../../../redux/mobileMenu';
-import { FaStar, FaXmark, FaSquareFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa6";
+import { FaStar, FaXmark, FaSquareFacebook, FaInstagram, FaTwitter, FaLinkedin } from "../../common/Icons";
 import { activeLink } from '../../../utils/functions';
 import Button from '../../common/Button';
 import './styles/MobileMenu.css';
@@ -24,7 +24,7 @@ export default function MobileMenu() {
           <img src="./images/logo.png" alt="logo" />
         </Link>
         <div className="icon-ctr" onClick={toggleMenu}>
-          <FaXmark size={25} style={{ cursor: 'pointer' }} />
+          <FaXmark size={28} />
         </div>
       </div>
       <div id='Menu-ctr'>
@@ -49,7 +49,7 @@ export default function MobileMenu() {
             id='watchlist-link-ctr' to='watchlist' 
             className={({isActive}) => activeLink(isActive)}
           >
-            <FaStar size={20} color='var(--text-gray-3)' /> Watchlist
+            <FaStar size={20} style={{ color:'var(--text-gray-3)', marginBottom: '2px' }} /> Watchlist
           </NavLink>
           <hr />
         </nav>
@@ -60,10 +60,10 @@ export default function MobileMenu() {
         <hr />
         <div className='follow-us'>
           <h3>Follow us:</h3>
-          <FaTwitter size={25} style={{ cursor: 'pointer' }} />
-          <FaSquareFacebook size={25} style={{ cursor: 'pointer' }} />
-          <FaInstagram size={25} style={{ cursor: 'pointer' }}/>
-          <FaLinkedin size={25} style={{ cursor: 'pointer' }} />
+          <FaTwitter size={25} />
+          <FaSquareFacebook size={25} />
+          <FaInstagram size={25} />
+          <FaLinkedin size={25} />
         </div>
       </div>
     </div>

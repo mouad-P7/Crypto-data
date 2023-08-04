@@ -3,7 +3,7 @@ import Hero from "../../common/Hero";
 import HighlightCard from "./HighlightCard";
 import Pct from "../../common/Pct";
 import CryptoTable from "./CryptoTable";
-import { FaCircleInfo } from "react-icons/fa6";
+import { FaCircleInfo } from "../../common/Icons";
 import './styles/Home.css';
 
 
@@ -41,7 +41,7 @@ export default function Home() {
         <div id="hightlights-ctr">
           <HighlightCard title='🔥 Trending' link='trending'/>
           <HighlightCard title='⭐ Top Community Accounts' link='community'/>
-          <HighlightCard title={<><p>Fear & Greed Index</p><FaCircleInfo /></>}/>
+          <HighlightCard title={<><p>Fear & Greed Index</p><FaCircleInfo size={14} /></>}/>
         </div>
       }
 

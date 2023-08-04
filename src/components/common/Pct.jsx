@@ -1,15 +1,15 @@
 import { removePlusOrMinus } from '../../utils/functions';
-import { FaCaretDown, FaCaretUp } from "react-icons/fa6";
+import { FaCaretDown, FaCaretUp } from "./Icons";
 
 
 export default function Pct({pct, ...restProps}) {
   let pctColor = '', caretIcon = <></>;
   if(pct >= 0){
     pctColor = 'var(--text-green)';
-    caretIcon = <FaCaretUp color="inherit"/>
+    caretIcon = <FaCaretUp size={12} />
   }else{
     pctColor = 'var(--text-red)';
-    caretIcon = <FaCaretDown color="inherit"/>
+    caretIcon = <FaCaretDown size={12} />
   }
   const pctCtrStyle = {
     display: 'inline-flex', 

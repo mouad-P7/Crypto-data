@@ -8,11 +8,15 @@ export default function TopbarData({children, value, pct, ...restProps}){
     gap: '2px',
     flexWrap: 'nowrap'
   };
+  const childrenStyle = {
+    display: 'inline-flex',
+    alignItems: 'center'
+  };
 
 
   return (
     <small style={topbarDataStyle} {...restProps}>
-      <span>{children}:</span>
+      <span style={childrenStyle}>{children}:</span>
       <span style={{ color: 'var(--text-blue)' }}>{value}</span>
       <Pct pct={pct} />
     </small>

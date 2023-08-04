@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
-import { FaStar, FaBars, FaMoon, FaMagnifyingGlass } from "react-icons/fa6";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { FaStar, FaBars, FaMoon, FaMagnifyingGlass } from "../../common/Icons";
 import { toggleMobileMenu } from '../../../redux/mobileMenu';
 import { activeLink } from '../../../utils/functions';
 import Button from '../../common/Button';
@@ -39,20 +39,20 @@ export default function Header() {
       <div id='header-right-ctr'>
         <NavLink to='watchlist' className={({isActive}) => activeLink(isActive)}>
           <Button className='transparent-btn'>
-            <FaStar size={17} color='var(--text-gray-3)' /> Watchlist
+            <FaStar size={20} style={{ color:'var(--text-gray-3)' }} /> Watchlist
           </Button>
         </NavLink>
         <Search />
       </div>
       <div id='menu-icons-ctr'>
         <div className="icon-ctr">
-          <FaMagnifyingGlass size={20} style={{ cursor: 'pointer' }} />
+          <FaMagnifyingGlass />
         </div>
         <div className="icon-ctr">
-          <FaMoon size={20} style={{ cursor: 'pointer' }} />
+          <FaMoon />
         </div>
         <div className="icon-ctr" onClick={toggleMenu}>
-          <FaBars size={20} style={{ cursor: 'pointer' }} />
+          <FaBars />
         </div>
       </div>
     </header>
