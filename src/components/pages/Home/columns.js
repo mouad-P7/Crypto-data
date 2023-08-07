@@ -17,7 +17,7 @@ function formatPrice(value){
 
 export default [
   {id: '', label: ''},
-  {id: 'cmc_rank', label: '#'},
+  {id: 'cmc_rank', label: '#', minWidth: 40},
   {id: 'name', label: 'Name', minWidth: 170},
   {
     id: 'price', 
@@ -28,42 +28,42 @@ export default [
   {
     id: 'percent_change_1h', 
     label: '1h %', 
-    minWidth: 70, 
+    minWidth: 80, 
     align: 'center',
     format: (value) => value.toFixed(2)
   },
   {
     id: 'percent_change_24h', 
     label: '24h %', 
-    minWidth: 70, 
+    minWidth: 80, 
     align: 'center',
     format: (value) => value.toFixed(2)
   },
   {
     id: 'percent_change_7d', 
     label: '7d %', 
-    minWidth: 70, 
+    minWidth: 80, 
     align: 'center',
     format: (value) => value.toFixed(2)
   },
   {
     id: 'market_cap', 
     label: 'Market Cap',
-    minWidth: 125,  
+    minWidth: 110,  
     align: 'center',
     format: (value) => compactPriceFormatter.format(value)
   },
   {
     id: 'volume_24h', 
     label: 'Volume (24h)', 
-    minWidth: 125, 
+    minWidth: 110, 
     align: 'center', 
     format: (value) => compactPriceFormatter.format(value)
   },
   {
     id: 'circulating_supply',
     label: 'Circulating Supply',
-    minWidth: 155,  
+    minWidth: 110,  
     align: 'center',
     format: (value) => compactNumFormatter.format(value)
   }

@@ -1,8 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow } from '@mui/material';
 import columns from './columns';
-import Pct from '../../common/Pct';
-import CoinLogo from '../../common/CoinLogo';
+import TableRowCell from './TableRowCell';
 
 
 export default function CoinsTable({data}) {
@@ -11,6 +10,7 @@ export default function CoinsTable({data}) {
       id: coin.id,
       cmc_rank: coin.cmc_rank,
       name: coin.name,
+      symbol: coin.symbol,
       price: coin.quote.USD.price,
       percent_change_1h: coin.quote.USD.percent_change_1h,
       percent_change_24h: coin.quote.USD.percent_change_24h,
@@ -35,17 +35,18 @@ export default function CoinsTable({data}) {
 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-      <TableContainer>
+      <TableContainer sx={{ maxHeight: 490 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow>
               {columns.map(column => (
                 <TableCell
                   key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth }}
+                  style={{ minWidth: column.minWidth, padding: '10px 8px' }}
                 >
-                  {column.label}
+                  <p style={{ textAlign: column.align, fontWeight: '700' }}>
+                    {column.label}
+                  </p>
                 </TableCell>
               ))}
             </TableRow>
@@ -57,16 +58,9 @@ export default function CoinsTable({data}) {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
                     {columns.map(column => {
-                      const cellValue = row[column.id];
                       return (
-                        <TableCell key={column.id}>
-                          <p style={{ textAlign: column.align }}>
-                          {
-                            column.format && typeof cellValue === 'number'
-                            ? column.format(cellValue)
-                            : cellValue
-                          }
-                          </p>
+                        <TableCell key={column.id} style={{ padding: '16px 8px' }}>
+                            <TableRowCell column={column} row={row} />
                         </TableCell>
                       );
                     })}
