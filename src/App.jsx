@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const AppLayout = lazy(() => import("./components/layouts/AppLayout/AppLayout"));
 const Home = lazy(() => import("./components/pages/Home/Home"));
+const CoinDetails = lazy(() => import("./components/pages/Home/CoinDetails/CoinDetails"));
 const Exchanges = lazy(() => import("./components/pages/Exchanges/Exchanges"));
 const Community = lazy(() => import("./components/pages/Community/Community"));
 const Products = lazy(() => import("./components/pages/Products/Products"));
@@ -21,6 +22,7 @@ export default function App(){
           <Routes>
             <Route path="/" element={<AppLayout />}>
                 <Route index element={<Home />} />
+                <Route path="coin/:id" element={<CoinDetails />} />
                 <Route path="exchanges" element={<Exchanges />} />
                 <Route path="community" element={<Community />} />
                 <Route path="products" element={<Products />} />
