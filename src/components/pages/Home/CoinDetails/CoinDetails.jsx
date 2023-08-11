@@ -2,7 +2,10 @@ import { useParams } from 'react-router-dom';
 
 
 export default function CoinDetails() {
+  const params = useParams();
+
+
   return (
-    <div>CoinDetails</div>
+    <div>{params.id}</div>
   );
 };

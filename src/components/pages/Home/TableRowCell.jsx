@@ -5,7 +5,6 @@ import CoinLogo from '../../common/CoinLogo';
 export default function getTableRowCell({column, row}){
   const cellValue = row[column.id];
   const TableRowCellStyle = { 
-    textAlign: column.align, 
     display: 'flex', 
     alignItems: 'center', 
     gap: '5px' 
@@ -19,9 +18,9 @@ export default function getTableRowCell({column, row}){
 
   switch (column.id) {
     case 'cmc_rank':
-      return <p style={{ textAlign: column.align }}>{cellValue}</p>;
+      return <p>{cellValue}</p>;
     case '':
-      return <p style={{ textAlign: column.align }}>⭐️</p>;
+      return <p>⭐️</p>;
     case 'price_graph':
       return <img src={getPriceGraph(row.id)} alt="price" loading='lazy' />;
     case 'name':
@@ -35,6 +34,6 @@ export default function getTableRowCell({column, row}){
     case 'percent_change_1h': case 'percent_change_24h': case 'percent_change_7d':
       return <Pct pct={column.format(cellValue)} />;
     default:
-      return <p style={{ textAlign: column.align }}>{column.format(cellValue)}</p>;
+      return <p>{column.format(cellValue)}</p>;
   };
 };

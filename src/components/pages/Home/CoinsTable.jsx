@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow } from '@mui/material';
 import columns from './columns';
 import TableRowCell from './TableRowCell';
@@ -56,11 +57,13 @@ export default function CoinsTable({data}) {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map(row => {
                 return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
+                  <TableRow key={row.id} sx={{minHeight: '81px'}} hover role="checkbox" tabIndex={-1}>
                     {columns.map(column => {
                       return (
                         <TableCell key={column.id} style={{ padding: '16px 8px' }}>
-                          <TableRowCell column={column} row={row} />
+                          <Link to={`coin/${row.id.toString()}`} style={{ justifyContent: column.align }}>
+                            <TableRowCell column={column} row={row} />
+                          </Link>
                         </TableCell>
                       );
                     })}
