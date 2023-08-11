@@ -10,6 +10,11 @@ export default function getTableRowCell({column, row}){
     alignItems: 'center', 
     gap: '5px' 
   };
+  
+
+  function getPriceGraph(id){
+    return `https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/${id}.svg`;
+  };
 
 
   switch (column.id) {
@@ -17,6 +22,8 @@ export default function getTableRowCell({column, row}){
       return <p style={{ textAlign: column.align }}>{cellValue}</p>;
     case '':
       return <p style={{ textAlign: column.align }}>⭐️</p>;
+    case 'price_graph':
+      return <img src={getPriceGraph(row.id)} alt="price" loading='lazy' />;
     case 'name':
       return (
         <div style={TableRowCellStyle}>

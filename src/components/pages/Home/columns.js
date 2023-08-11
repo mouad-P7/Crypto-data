@@ -66,5 +66,11 @@ export default [
     minWidth: 110,  
     align: 'center',
     format: (value) => compactNumFormatter.format(value)
+  },
+  {
+    id: 'price_graph', 
+    label: 'Last 7 Days', 
+    minWidth: 180,
+    align: 'center'
   }
 ];

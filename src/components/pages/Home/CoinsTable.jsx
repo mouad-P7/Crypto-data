@@ -60,7 +60,7 @@ export default function CoinsTable({data}) {
                     {columns.map(column => {
                       return (
                         <TableCell key={column.id} style={{ padding: '16px 8px' }}>
-                            <TableRowCell column={column} row={row} />
+                          <TableRowCell column={column} row={row} />
                         </TableCell>
                       );
                     })}
