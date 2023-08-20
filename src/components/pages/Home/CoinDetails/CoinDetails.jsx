@@ -6,6 +6,6 @@ export default function CoinDetails() {
 
 
   return (
-    <div>{params.id}</div>
+    <div>{params.slug}</div>
   );
 };

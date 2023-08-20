@@ -11,6 +11,7 @@ export default function CoinsTable({data}) {
       id: coin.id,
       cmc_rank: coin.cmc_rank,
       name: coin.name,
+      slug: coin.slug,
       symbol: coin.symbol,
       price: coin.quote.USD.price,
       percent_change_1h: coin.quote.USD.percent_change_1h,
@@ -61,7 +62,7 @@ export default function CoinsTable({data}) {
                     {columns.map(column => {
                       return (
                         <TableCell key={column.id} style={{ padding: '16px 8px' }}>
-                          <Link to={`coin/${row.id.toString()}`} style={{ justifyContent: column.align }}>
+                          <Link to={`coin/${row.slug}`} style={{ justifyContent: column.align }}>
                             <TableRowCell column={column} row={row} />
                           </Link>
                         </TableCell>

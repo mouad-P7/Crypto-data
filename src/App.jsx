@@ -22,7 +22,7 @@ export default function App(){
           <Routes>
             <Route path="/" element={<AppLayout />}>
                 <Route index element={<Home />} />
-                <Route path="coin/:id" element={<CoinDetails />} />
+                <Route path="coin/:slug" element={<CoinDetails />} />
                 <Route path="exchanges" element={<Exchanges />} />
                 <Route path="community" element={<Community />} />
                 <Route path="products" element={<Products />} />
