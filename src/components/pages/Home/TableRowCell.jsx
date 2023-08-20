@@ -1,5 +1,4 @@
 import Pct from '../../common/Pct';
-import CoinLogo from '../../common/CoinLogo';
 
 
 export default function getTableRowCell({column, row}){
@@ -14,6 +13,9 @@ export default function getTableRowCell({column, row}){
   function getPriceGraph(id){
     return `https://s3.coinmarketcap.com/generated/sparklines/web/7d/2781/${id}.svg`;
   };
+  function getCoinLogo(id){
+    return `https://s2.coinmarketcap.com/static/img/coins/64x64/${id}.png`;
+  };
 
 
   switch (column.id) {
@@ -26,7 +28,9 @@ export default function getTableRowCell({column, row}){
     case 'name':
       return (
         <div style={TableRowCellStyle}>
-          <CoinLogo symbol={row.symbol}/>
+          <div style={{ width: '24px', height: '24px' }}>
+            <img className="bg-img" src={getCoinLogo(row.id)} alt="coin" loading='lazy' />
+          </div>
           <p>{cellValue}</p>
           <span style={{ color: 'var(--text-gray)' }}>{row.symbol}</span> 
         </div>
