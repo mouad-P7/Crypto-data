@@ -21,13 +21,13 @@ export default function App(){
         <Suspense fallback={<PageLoading />}>
           <Routes>
             <Route path="/" element={<AppLayout />}>
-                <Route index element={<Home />} />
-                <Route path="coin/:slug" element={<CoinDetails />} />
-                <Route path="exchanges" element={<Exchanges />} />
-                <Route path="community" element={<Community />} />
-                <Route path="products" element={<Products />} />
-                <Route path="learn" element={<Learn />} />
-                <Route path="watchlist" element={<Watchlist />} />
+              <Route index element={<Home />} />
+              <Route path="coin/:slug" element={<CoinDetails />} />
+              <Route path="exchanges" element={<Exchanges />} />
+              <Route path="community" element={<Community />} />
+              <Route path="products" element={<Products />} />
+              <Route path="learn" element={<Learn />} />
+              <Route path="watchlist" element={<Watchlist />} />
             </Route>
             <Route path='*' element={<NotFound />} />
           </Routes>
