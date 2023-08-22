@@ -1,9 +1,7 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Alert, Tabs, Tab, Box } from '@mui/material';
-import { fetchData } from '../../../../utils/api';
-import Spinner from '../../../common/Spinner';
+import { Tabs, Tab, Box } from '@mui/material';
 import Chart from './Chart';
 import Statistics from './Statistics';
 import Markets from './Markets';
@@ -11,14 +9,8 @@ import About from './About';
 
 
 export default function CoinDetails() {
-  const [coinData, setCoinData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
   const [value, setValue] = useState(0);
   const params = useParams();
-  const apiUrl = `https://pro-api.coinmarketcap.com/v2/cryptocurrency/info?slug=${params.slug}`;
-
-
   const tabStyle = { fontWeight: 'bold', color: 'var(--text-black)' };
 
 
@@ -45,35 +37,6 @@ export default function CoinDetails() {
   };
 
 
-  async function fetchCoinData() {
-    try {
-      setCoinData(await fetchData(apiUrl));
-    } catch (error) {
-      console.error(error);
-      setError(error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-
-  useEffect(() => {fetchCoinData()}, []);
-
-
-  if(loading){
-    return (
-      <div className="spinner-ctr" style={{ marginTop: '60px' }}>
-        <Spinner size='60px' />
-      </div>
-    );
-  }
-
-
-  if(error !== ''){
-    return <Alert severity="error">{error}</Alert>;
-  }
-
-
   return (
     <Box sx={{ width: '100%', padding: '20px 0px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -85,16 +48,16 @@ export default function CoinDetails() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <Chart coinData={coinData} />
+        <Chart slug={params.slug} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <Statistics coinData={coinData} />
+        <Statistics slug={params.slug} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        <Markets coinData={coinData} />
+        <Markets slug={params.slug} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
-        <About coinData={coinData} />
+        <About slug={params.slug} />
       </CustomTabPanel>
     </Box>
   );

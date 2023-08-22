@@ -1,7 +1,7 @@
 import UnderDevelopement from "../../../common/UnderDevelopement";
 
 
-export default function About({coinData}) {
+export default function About({slug}) {
   return (
     <div>
       <UnderDevelopement />

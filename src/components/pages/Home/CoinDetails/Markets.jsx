@@ -1,7 +1,7 @@
 import UnderDevelopement from "../../../common/UnderDevelopement";
 
 
-export default function Markets({coinData}) {
+export default function Markets({slug}) {
   return (
     <div>
       <UnderDevelopement />
