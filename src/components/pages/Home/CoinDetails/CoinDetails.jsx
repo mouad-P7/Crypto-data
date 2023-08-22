@@ -4,10 +4,14 @@ import PropTypes from 'prop-types';
 import { Alert, Tabs, Tab, Box } from '@mui/material';
 import { fetchData } from '../../../../utils/api';
 import Spinner from '../../../common/Spinner';
+import Chart from './Chart';
+import Statistics from './Statistics';
+import Markets from './Markets';
+import About from './About';
 
 
 export default function CoinDetails() {
-  const [coinDetails, setCoinDetails] = useState([]);
+  const [coinData, setCoinData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [value, setValue] = useState(0);
@@ -38,9 +42,9 @@ export default function CoinDetails() {
   };
 
 
-  async function fetchCoinDetails() {
+  async function fetchCoinData() {
     try {
-      setCoinDetails(await fetchData(apiUrl));
+      setCoinData(await fetchData(apiUrl));
     } catch (error) {
       console.error(error);
       setError(error.message);
@@ -50,7 +54,7 @@ export default function CoinDetails() {
   };
 
 
-  useEffect(() => {fetchCoinDetails()}, []);
+  useEffect(() => {fetchCoinData()}, []);
 
 
   if(loading){
@@ -78,16 +82,16 @@ export default function CoinDetails() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        {params.slug} Chart
+        <Chart coinData={coinData} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        {params.slug} Statistics
+        <Statistics coinData={coinData} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        {params.slug} Markets
+        <Markets coinData={coinData} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
-        {params.slug} About
+        <About coinData={coinData} />
       </CustomTabPanel>
     </Box>
   );
