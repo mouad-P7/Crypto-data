@@ -19,6 +19,9 @@ export default function CoinDetails() {
   const apiUrl = `https://pro-api.coinmarketcap.com/v2/cryptocurrency/info?slug=${params.slug}`;
 
 
+  const tabStyle = { fontWeight: 'bold', color: 'var(--text-black)' };
+
+
   function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
@@ -75,10 +78,10 @@ export default function CoinDetails() {
     <Box sx={{ width: '100%', padding: '20px 0px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs">
-          <Tab label="Chart" {...a11yProps(0)} />
-          <Tab label="Statistics" {...a11yProps(1)} />
-          <Tab label="Markets" {...a11yProps(2)} />
-          <Tab label="About" {...a11yProps(3)} />
+          <Tab label="Chart" {...a11yProps(0)} sx={tabStyle} />
+          <Tab label="Statistics" {...a11yProps(1)} sx={tabStyle} />
+          <Tab label="Markets" {...a11yProps(2)} sx={tabStyle} />
+          <Tab label="About" {...a11yProps(3)} sx={tabStyle} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
