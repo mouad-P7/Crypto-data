@@ -40,7 +40,7 @@ export default function CoinDetails() {
   return (
     <Box sx={{ width: '100%', padding: '20px 0px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs">
+        <Tabs value={value} onChange={handleChange} aria-label="tabs" centered>
           <Tab label="Chart" {...a11yProps(0)} sx={tabStyle} />
           <Tab label="Statistics" {...a11yProps(1)} sx={tabStyle} />
           <Tab label="Markets" {...a11yProps(2)} sx={tabStyle} />
