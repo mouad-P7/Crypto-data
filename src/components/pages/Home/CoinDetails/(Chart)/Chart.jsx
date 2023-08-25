@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import Alert from '@mui/material/Alert';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { fetchData } from '../../../../utils/api';
-import Spinner from '../../../common/Spinner';
-import { formatPrice } from '../../../../utils/numberFormat';
+import { fetchData } from '../../../../../utils/api';
+import Spinner from '../../../../common/Spinner';
+import { formatPrice } from '../../../../../utils/numberFormat';
 
 
 ChartJS.register( CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);

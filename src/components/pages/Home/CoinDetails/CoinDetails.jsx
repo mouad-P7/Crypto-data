@@ -2,10 +2,10 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Tabs, Tab, Box } from '@mui/material';
-import Chart from './Chart';
-import Statistics from './Statistics';
-import Markets from './Markets';
-import About from './About';
+import Chart from './(Chart)/Chart';
+import Statistics from './(Statistics)/Statistics';
+import Markets from './(Markets)/Markets';
+import About from './(About)/About';
 
 
 export default function CoinDetails() {
