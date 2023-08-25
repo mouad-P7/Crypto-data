@@ -1,18 +1,4 @@
-const priceFormatter = new Intl.NumberFormat('en-us', { 
-  style: 'currency', currency: 'USD', minimumFractionDigits: 9
-});
-const compactPriceFormatter = new Intl.NumberFormat('en-us', { 
-  style: 'currency', currency: 'USD', notation: 'compact' 
-});
-const compactNumFormatter = new Intl.NumberFormat('en-us', { 
-  notation: 'compact' 
-});
-
-
-function formatPrice(value){
-  if (Math.abs(value) < 0.001) return priceFormatter.format(value);
-  else return `$${value.toFixed(2)}`;
-};
+import { formatPrice, formatCompactPrice, formatCompactNumber } from "../../../utils/numberFormat";
 
 
 export default [
@@ -51,21 +37,21 @@ export default [
     label: 'Market Cap',
     minWidth: 110,  
     align: 'center',
-    format: (value) => compactPriceFormatter.format(value)
+    format: (value) => formatCompactPrice(value)
   },
   {
     id: 'volume_24h', 
     label: 'Volume (24h)', 
     minWidth: 110, 
     align: 'center', 
-    format: (value) => compactPriceFormatter.format(value)
+    format: (value) => formatCompactPrice(value)
   },
   {
     id: 'circulating_supply',
     label: 'Circulating Supply',
     minWidth: 110,  
     align: 'center',
-    format: (value) => compactNumFormatter.format(value)
+    format: (value) => formatCompactNumber(value)
   },
   {
     id: 'price_graph', 
