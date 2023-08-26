@@ -1,0 +1,46 @@
+.top-of-chart-ctr{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* ============================================== */
+
+.radio-inputs {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  background-color: #EEE;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 4px 6px;
+  font-size: 14px;
+  max-width: 200px;
+  min-width: 125px;
+}
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+.radio-inputs .radio input {
+  display: none;
+}
+.radio-inputs .radio .range {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: none;
+  padding: 3px 0;
+  color: rgba(51, 65, 85, 1);
+  transition: all .15s ease-in-out;
+}
+.radio-inputs .radio input:checked + .range {
+  background-color: #fff;
+  font-weight: 600;
+}

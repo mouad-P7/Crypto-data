@@ -11,13 +11,17 @@ import About from './(About)/About';
 export default function CoinDetails() {
   const [value, setValue] = useState(0);
   const params = useParams();
-  const tabStyle = { fontWeight: 'bold', color: 'var(--text-black)' };
+  const tabStyle = { 
+    fontWeight: 'bold', 
+    color: 'var(--text-black)'
+  };
 
 
   function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
-      <div role="tabpanel" hidden={value !== index} id={`simple-tabpanel-${index}`}
+      <div 
+        role="tabpanel" hidden={value !== index} id={`simple-tabpanel-${index}`}
         aria-labelledby={`simple-tab-${index}`} {...other}
       >
         {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
@@ -40,7 +44,7 @@ export default function CoinDetails() {
   return (
     <Box sx={{ width: '100%', padding: '20px 0px' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="tabs" centered>
+        <Tabs value={value} onChange={handleChange} aria-label="tabs" centered >
           <Tab label="Chart" {...a11yProps(0)} sx={tabStyle} />
           <Tab label="Statistics" {...a11yProps(1)} sx={tabStyle} />
           <Tab label="Markets" {...a11yProps(2)} sx={tabStyle} />
