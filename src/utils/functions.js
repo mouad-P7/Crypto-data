@@ -4,8 +4,3 @@ export function removePlusOrMinus(number){
   else 
     return number;
 };
-
-
-export function activeLink(isActive){
-  return isActive ? "isActive" : null;
-};

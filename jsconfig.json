@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@app/*": ["./src/app/*"],
+      "@ui/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@redux/*": ["./src/redux/*"],
+    }
+  }
+}

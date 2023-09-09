@@ -1,9 +1,12 @@
-import './styles/Button.css';
+export default function Button({children, btn, ...restProps}){
+  let style = "";
+  if(btn === "blue") style = "bg-blue text-white hover:bg-hover-blue";
+  else if(btn === "white") style = "bg-white text-blue border border-blue hover:bg-hover-white";
+  else if(btn === "transparent") style = "bg-white text-black hover:bg-hover-white";
 
 
-export default function Button({children, ...restProps}){
   return (
-    <button {...restProps}>
+    <button className={`px-3 py-1 cursor-pointer rounded-3xl flex items-center justify-center gap-1 ${style}`} {...restProps}>
       {children}
     </button>
   );
