@@ -7,10 +7,10 @@ import AppLayout from "@ui/layouts/app/AppLayout";
 const inter = Inter({ subsets: ['latin'] });
 
 
-export const metadata = {
-  title: 'Crypto Data',
-  description: 'Coin market cap clone.',
-};
+// export const metadata = {
+//   title: 'Crypto Data',
+//   description: 'Coin market cap clone.',
+// };
 
 
 export default function RootLayout({ children }) {
@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
         <head>
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta name="description" content={metadata.description} />
+          <meta name="description" content="Coin market cap clone." />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
-          <title>{metadata.title}</title>
+          <title>Crypto Data</title>
         </head>
         <body className={`w-screen min-h-screen bg-white ${inter.className}`}>
           <AppLayout />

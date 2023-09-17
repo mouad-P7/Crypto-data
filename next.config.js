@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
 
-module.exports = nextConfig
+
+const nextConfig = {
+  images: {
+    domains: ['assets.coingecko.com', 's3.coinmarketcap.com'],
+  },
+};
+
+
+module.exports = nextConfig;
