@@ -18,6 +18,9 @@ export default function Topbar() {
         </GeneralData>
         <GeneralData value='51/100'>Fear & Greed</GeneralData>
       </div>
+      <div className=" justify-end items-center flex lg:hidden">
+        <DarkLightMode />
+      </div>
       <div className=" justify-end items-center hidden lg:flex">
         <DarkLightMode />
         <span className="h-5 w-[1.5px] mx-[10px] bg-gray" />

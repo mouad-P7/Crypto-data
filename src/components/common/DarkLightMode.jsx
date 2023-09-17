@@ -27,8 +27,6 @@ export default function DarkLightMode() {
 
   function handleThemeChange() {
     setThemeColor(theme === 'dark' ? 'light' : 'dark');
-    // setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'));
-    console.log('Theme: ' + theme);
   };
 
 

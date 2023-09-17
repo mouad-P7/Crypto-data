@@ -40,7 +40,7 @@ export default function Header() {
         </Link>
       </nav>
       <div className="hidden items-center justify-between gap-4 lg:flex">
-        <Link href='/watchlist' className={pathname === '/watchlist' && 'isActive'}>
+        <Link href='/watchlist' className={pathname === '/watchlist' ? 'isActive' : ''}>
           <Button btn='transparent'>
             <FaStar size={20} className="text-gray-3" /> Watchlist
           </Button>
