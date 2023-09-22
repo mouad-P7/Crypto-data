@@ -70,12 +70,12 @@ const columns = [
     align: 'center',
     format: (value) => formatCompactNumber(value)
   },
-  {
-    id: 'price_graph', 
-    label: 'Last 7 Days', 
-    minWidth: 180,
-    align: 'center'
-  }
+  // {
+  //   id: 'price_graph', 
+  //   label: 'Last 7 Days', 
+  //   minWidth: 180,
+  //   align: 'center'
+  // }
 ];
 
 
