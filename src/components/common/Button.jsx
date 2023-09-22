@@ -6,7 +6,7 @@ export default function Button({children, btn, ...restProps}){
 
 
   return (
-    <button className={`px-3 py-1 cursor-pointer rounded-3xl flex items-center justify-center gap-1 ${style}`} {...restProps}>
+    <button className={`px-[10px] py-[4px] cursor-pointer rounded-3xl flex items-center justify-center gap-1 ${style}`} {...restProps}>
       {children}
     </button>
   );

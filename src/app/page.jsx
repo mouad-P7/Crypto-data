@@ -14,11 +14,5 @@ export default async function App() {
   const cryptoData = await fetchCryptoData();
   
 
-  return (
-    <div className="p-15px">
-      <div className="py-20px">
-        <CryptoTable data={cryptoData} />
-      </div>
-    </div>
-  );
+  return <CryptoTable data={cryptoData} />;
 };

@@ -21,12 +21,11 @@ export default function RootLayout({ children }) {
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="description" content="Coin market cap clone." />
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
           <title>Crypto Data</title>
         </head>
         <body className={`w-screen min-h-screen bg-white ${inter.className}`}>
           <AppLayout />
-          <main>{children}</main>  
+          <main className="p-[15px]">{children}</main>  
         </body>
       </html>
     </ReduxProvider>
