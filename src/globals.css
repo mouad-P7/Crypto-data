@@ -29,6 +29,8 @@
 
 /*---------- Global CSS ------------*/
 
+:root[data-theme="dark"] .light-mode-img {display: none;}
+:root[data-theme="light"] .dark-mode-img {display: none;}
 *{
   position: relative;
   margin: 0;

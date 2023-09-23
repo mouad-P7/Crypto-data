@@ -1,13 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useDispatch } from 'react-redux';
 import { FaStar, FaBars, FaMagnifyingGlass } from "@ui/common/Icons";
 import { toggleMobileMenu } from '@redux/mobileMenu';
 import Button from '@ui/common/Button';
 import Search from './Search';
+import ThemeImage from '@ui/common/ThemeImage';
 
 
 export default function Header() {
@@ -23,7 +23,11 @@ export default function Header() {
   return (
     <header className="flex items-center p-4 justify-between gap-5">
       <Link href='/'>
-        <Image src="/images/logo.png" alt="logo" width={153} height={30}/>
+        <ThemeImage 
+          lightImg="light-mode-logo.png" 
+          darkImg="dark-mode-logo.png"
+          width={153} height={30} alt="logo" priority={false}
+        />
       </Link>
       <nav className="hidden items-center flex-grow justify-start gap-5 lg:flex">
         <Link href='/exchanges' className={pathname === '/exchanges' ? 'isActive font-semibold' : 'font-semibold'}>
